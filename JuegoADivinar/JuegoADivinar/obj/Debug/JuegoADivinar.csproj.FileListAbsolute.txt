@@ -1,0 +1,17 @@
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\bin\Debug\JuegoADivinar.exe.config
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\bin\Debug\JuegoADivinar.exe
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\bin\Debug\JuegoADivinar.pdb
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\MainWindow.g.cs
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\VentanaAdivinado.g.cs
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\App.g.cs
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar_MarkupCompile.cache
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar_MarkupCompile.lref
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\MainWindow.baml
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\VentanaAdivinado.baml
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.g.resources
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.Properties.Resources.resources
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.exe
+C:\Users\Usuario\source\repos\JuegoADivinar\JuegoADivinar\obj\Debug\JuegoADivinar.pdb

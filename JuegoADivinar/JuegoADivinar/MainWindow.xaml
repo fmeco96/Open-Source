@@ -1,0 +1,74 @@
+﻿<Window x:Class="JuegoADivinar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuegoADivinar"
+        mc:Ignorable="d"
+        Title="Adivina el Número" Height="300" Width="490" Background="White" ResizeMode="CanMinimize">
+    <Grid HorizontalAlignment="Left">
+        <Grid Name="panel" HorizontalAlignment="Left" Width="480">
+            <StackPanel Name="stackpanelMenu" >
+                <Label x:Name="label" Content="¡Bienvenido/a a Adivina el Número!" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.987,-1.462" Width="270" FontSize="16" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" TextOptions.TextHintingMode="Animated" FontWeight="Medium">
+                    <Label.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.5"/>
+                    </Label.Background>
+                </Label>
+                <Button x:Name="botonJugar" Content="Jugar" Margin="30,30,310,0" HorizontalContentAlignment="Left" Click="ButtonJugar_Click" FontStyle="Italic" Cursor="Hand" VerticalContentAlignment="Center" Padding="7,1,1,1" FontSize="14" FontWeight="Medium" BorderThickness="2" Height="25"/>
+                <Button x:Name="botonPuntajes" Content="Mejores Puntajes" Margin="30,5,274,0" Padding="7,1,1,1" HorizontalContentAlignment="Left" FontStyle="Italic" FontSize="14" Click="BotonPuntajes_Click" FontWeight="Medium" BorderThickness="2"/>
+                <Button x:Name="botonReglas" Content="Reglas" Margin="30,5,291,0" Padding="7,1,1,1" HorizontalContentAlignment="Left" Click="BotonReglas_Click" FontStyle="Italic" FontSize="14" FontWeight="Medium" BorderThickness="2"/>
+                <Button x:Name="botonSalir" Content="Salir" Margin="30,5,330,0" Padding="7,1,1,1" HorizontalContentAlignment="Left" Click="BotonSalir_Click" FontStyle="Italic" FontSize="14" FontWeight="Medium" BorderThickness="2"/>
+            </StackPanel>
+            <Grid Name="dificultad" Margin="0,0,10,0" Visibility="Collapsed">
+                <Label x:Name="labelDificultad" Content="Elija la dificultad:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="136" FontSize="16"/>
+                <RadioButton x:Name="radioButtonFacil" Content="Fácil" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="151,47,0,0" VerticalAlignment="Top" Height="21" Width="62" FontSize="16" RenderTransformOrigin="0.5,0.5" Checked="RadioButtonFacil_Checked"/>
+                <RadioButton x:Name="radioButtonMedio" Content="Medio" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="151,73,0,0" VerticalAlignment="Top" Height="21" Width="75" FontSize="16" RenderTransformOrigin="0.5,0.5" Checked="RadioButtonMedio_Checked"/>
+                <RadioButton x:Name="radioButtonDificil" Content="Difícil" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="151,99,0,0" VerticalAlignment="Top" Height="21" Width="75" FontSize="16" RenderTransformOrigin="0.5,0.5" Checked="RadioButtonDificil_Checked"/>
+
+                <Label x:Name="labelDificultadFacil" Content="(Del 0 al 25, 5 oportunidades)" HorizontalAlignment="Left" Margin="213,45,0,0" VerticalAlignment="Top" FontStyle="Italic" Visibility="Hidden"/>
+                <Label x:Name="labelDificultadMedio" Content="(Del 0 al 50, 4 oportunidades)" HorizontalAlignment="Left" Margin="231,72,0,0" VerticalAlignment="Top" FontStyle="Italic" Visibility="Hidden"/>
+                <Label x:Name="labelDificultadDificil" Content="(Del 0 al 100, 3 oportunidades)" HorizontalAlignment="Left" Margin="226,98,0,0" VerticalAlignment="Top" FontStyle="Italic" Visibility="Hidden"/>
+                
+                <Button x:Name="buttonEmpezar" Content="Empezar!" HorizontalAlignment="Left" Margin="160,150,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="ButtonEmpezar_Click"/>
+                <Button x:Name="buttonVolver" Content="Volver" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top" Width="75" Click="ButtonVolver_Click"/>
+            </Grid>
+            <Grid Name="comienzoJuego" Visibility="Collapsed">
+                <Label x:Name="label1" Content="Ingrese un número:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" FontSize="16"/>
+                <TextBox x:Name="textBoxIntento" HorizontalAlignment="Left" Height="26" Margin="162,61,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="40" FontSize="16" GotFocus="TextBoxIntento_GotFocus"/>
+                
+                <Button x:Name="buttonIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="219,61,0,0" VerticalAlignment="Top" Width="66" Height="26" Click="ButtonIngresar_Click"/>
+                
+                <Label x:Name="labelNumMenor" Content="" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic" Visibility="Hidden"/>
+                <Label x:Name="labelNumMayor" Content="" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic" Visibility="Hidden"/>
+                <Label x:Name="tiempo" Content="" HorizontalAlignment="Left" Margin="379,233,0,0" VerticalAlignment="Top" Width="91"/>
+                <Label x:Name="labelNumVacio" Content="" HorizontalAlignment="Left" Margin="300,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.231" Width="148" FontStyle="Italic"/>
+            </Grid>
+            <Grid Name="reglas" Visibility="Collapsed">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="175" Width="445" TextWrapping="Wrap" FontSize="16"><Run Text=" - "/><Run Text="El juego consiste en adivinar el número secreto."/><LineBreak/><Run Text=" - "/><Run Text="Cuentas con 3 modos de dificultad: fácil, medio y difícil."/><LineBreak/><Run Text=" - "/><Run Text="Cuando ingresas un número incorrecto perderás una oportunidad, si llegas a 0 el juego habrá terminado."/><LineBreak/><Run Text=" - "/><Run Text="Si consigues adivinar el número habrás ganado y podrás registrar tu puntaje."/><LineBreak/><Run Text=" - El puntaje será de acuerdo a la dificultad y la cantidad de intentos que hayas utilizado."/><LineBreak/><Run/></TextBlock>
+                
+                <Label x:Name="label2" Content="Reglas:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Width="65" FontSize="16" FontWeight="Medium"/>
+                
+                <Button x:Name="aceptarReglas" Content="Volver" HorizontalAlignment="Left" Margin="10,228,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAceptarReglas_Click"/>
+            </Grid>
+            <Grid Name="Puntajes" Visibility="Collapsed">
+                <ListView x:Name="listPuntajes" IsHitTestVisible="False" HorizontalAlignment="Left" Height="157" Margin="10,59,0,0" VerticalAlignment="Top" Width="259">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Puesto" DisplayMemberBinding="{Binding Puesto}" Width="60"/>
+                            <GridViewColumn Header="Nombre" DisplayMemberBinding="{Binding Nombre}" Width="100"/>
+                            <GridViewColumn Header="Puntos" DisplayMemberBinding="{Binding Puntos}" Width="88"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Label x:Name="label3" Content="Mejores puntajes:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="14"/>
+                
+                <Button x:Name="buttonVolverMenu" Content="Volver" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="75" Click="ButtonVolverMenu_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
