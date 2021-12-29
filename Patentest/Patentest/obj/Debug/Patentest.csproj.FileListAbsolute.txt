@@ -1,0 +1,17 @@
+C:\Users\usuario\source\repos\Patentest\Patentest\bin\Debug\Patentest.exe.config
+C:\Users\usuario\source\repos\Patentest\Patentest\bin\Debug\Patentest.exe
+C:\Users\usuario\source\repos\Patentest\Patentest\bin\Debug\Patentest.pdb
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Login.g.cs
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\MainWindow.g.cs
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\App.g.cs
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest_MarkupCompile.cache
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest_MarkupCompile.lref
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Login.baml
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\MainWindow.baml
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.g.resources
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.Properties.Resources.resources
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.exe
+C:\Users\usuario\source\repos\Patentest\Patentest\obj\Debug\Patentest.pdb
