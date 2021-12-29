@@ -17,9 +17,9 @@
                     <TextBox x:Name="txtBusqueda" KeyDown="TxtBusqueda_KeyDown" VerticalContentAlignment="Center" SelectionChanged="TxtBusqueda_SelectionChanged" Margin="154,16,569,0" Height="24" VerticalAlignment="Top" Width="140"/>
                     <Button x:Name="btnBuscar" Content="Buscar" Margin="308,15,441,0" Click="BtnBuscar_Click" Height="28" VerticalAlignment="Top"/>
 
-                    <Expander x:Name="expanderDatos" Header="Detalles" HorizontalAlignment="Left" Height="192" Margin="22,364,0,0" VerticalAlignment="Top" Width="772">
+                    <Expander x:Name="expanderDatos" IsEnabled="False" Header="Detalles" HorizontalAlignment="Left" Height="192" Margin="22,364,0,0" VerticalAlignment="Top" Width="772">
                         <Grid HorizontalAlignment="Left" Width="855">
-                            <GroupBox Header="Datos Personales" Margin="3,2,0,0" HorizontalAlignment="Left" Width="479" Height="161" VerticalAlignment="Top">
+                            <GroupBox Header="Datos Personales" IsEnabled="True" Margin="3,2,0,0" HorizontalAlignment="Left" Width="479" Height="161" VerticalAlignment="Top">
                                 <Grid Height="133" VerticalAlignment="Top">
                                     <Label Content="Nombre:" HorizontalAlignment="Left" Margin="2,4,0,0" VerticalAlignment="Top"/>
                                     <Label Content="Apellido:" HorizontalAlignment="Left" Margin="2,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.769"/>

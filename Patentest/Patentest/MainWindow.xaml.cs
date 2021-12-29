@@ -271,13 +271,9 @@ namespace Patentest
                 commandModificar.Parameters.AddWithValue("@año", ComboBoxAnioDet.Text);
                 commandModificar.Parameters.AddWithValue("@estado", estado);
 
-                commandModificar.ExecuteNonQuery();
+                commandModificar.ExecuteNonQuery();                
 
-                miConexionSql.Close();
-                VerDetalles();
-
-                MessageBox.Show("Datos actualizados con exito");
-                         
+                MessageBox.Show("Datos actualizados con exito");                         
             }
             catch (Exception e)
             {
@@ -286,6 +282,7 @@ namespace Patentest
             finally
             {
                 miConexionSql.Close();
+                BusquedaDatos();
             }
         }
 
@@ -671,8 +668,7 @@ namespace Patentest
                 txtBoxMarca.Text = listDetalles[0].Marca;
                 txtBoxModelo.Text = listDetalles[0].Modelo;
                 txtBoxPatente.Text = listDetalles[0].Patente.ToUpper();
-                ComboBoxAnioDet.Text = listDetalles[0].Anio;
-
+                ComboBoxAnioDet.Text = listDetalles[0].Anio;                
 
                 if (listDetalles[0].Fecha.Equals("01/01/1900 0:00:00"))
                 {
@@ -1037,6 +1033,9 @@ namespace Patentest
         private void CheckBoxVerDet_Checked(object sender, RoutedEventArgs e)
         {
             expanderDatos.IsExpanded = true;
+            //expanderDatos.IsEnabled = true;
+
+            expanderDatos.Visibility = Visibility.Visible;
 
             if (txtBusqueda.Text != "")
             {
@@ -1047,11 +1046,18 @@ namespace Patentest
         private void CheckBoxVerDet_Unchecked(object sender, RoutedEventArgs e)
         {
             expanderDatos.IsExpanded = false;
+            expanderDatos.IsEnabled = false;
+
+            checkBoxEditar.IsChecked = false;
+
             VaciarCamposBusqueda();
         }
 
         private void CheckBoxEditar_Checked(object sender, RoutedEventArgs e)
         {
+            expanderDatos.IsExpanded = true;
+            expanderDatos.IsEnabled = true;
+
             HabilitarEdicion();
         }
 
@@ -1108,5 +1114,6 @@ namespace Patentest
         {
             ModificarDatos();
         }
+        
     }
 }
